@@ -38,7 +38,8 @@ class MainActivity : AppCompatActivity() {
 
 
     fun sumar(valor: String, incremento: Int): String {
-        return (valor.toInt() + incremento).toString()
+        val num = (valor.toInt() + incremento)
+        return (if (num > 0) num else 0).toString()
     }
 
     fun terminar(puntosLocal: String, puntosVisitante: String) {
